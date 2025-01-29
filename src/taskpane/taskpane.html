@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PECai - Email Assistant</title>
+    <link rel="stylesheet" href="taskpane.css"/>
+    <link rel="icon" href="../../assets/summary-16.jpg"/>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="taskpane.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="flags" id="flags">
+            <img id="uk_flag" src="../../assets/gb.png" alt="English" title="English" onclick="setLanguage('english')"/>
+            <img id="de_flag" src="../../assets/de.png" alt="German" title="Switch to German" onclick="setLanguage('german')"/>
+            <img id="it_flag" src="../../assets/it.png" alt="Italian" title="Switch to Italian" onclick="setLanguage('italian')"/>
+        </div>
+        <div class="header">
+            <h1 id="headerText">PECai - Your Email Assistant</h1>
+        </div>
+    </div>
+
+    <p id="descriptionText">PECai uses advanced AI to quickly summarize emails. Streamline your workflow and increase productivity!</p>
+    <a id="atext" href="#" onclick="showMoreLess()">Show more</a>
+
+    <div class="main">
+        <pre id="summaryText">Click on the button to summarize...</pre>
+        <button id="buttonClick" title="Summarize in english" onclick="summarizeEmail()">Summarize Email</button>
+        <!-- <div id="placeholdermsg" class="vidDiv" style="display:none;">
+            <video id="loadingVideo" src="../../assets/dynamic_logo.mp4" autoplay loop muted 
+                   style="height: 60px; border-radius: 15px; border: 5px solid rgba(255,255,255,0.5); align-items: center;"></video>
+        </div> -->
+    </div>
+</body>
+</html>

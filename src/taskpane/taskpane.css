@@ -1,0 +1,163 @@
+
+body {
+    background: 
+    linear-gradient(to bottom, white 45%, #4d8395);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(14px, 4.5vw, 20px); /* Dynamic font size for body */
+    color: #3f3f3f;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed; /* Ensures the gradient doesn't repeat */
+}
+
+.head, .main {
+    position: relative; /* Ensure other elements stack above the background */
+    z-index: 1;
+}
+
+/* Style the positionning between flags and header */
+.head {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the flags */
+.flags {
+    /*display: none;*/
+    position: inherit;
+    align-self: flex-end;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.flags img {
+    height: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.disabledFlags {    /* Define flags behaviour while disabled */
+    pointer-events: none; /* Disables clicking */
+    opacity: 0.5; /* Makes the element look disabled */
+}
+
+#toggleFlags {
+    cursor: pointer;
+    font-size: small;
+    color: #38606e;
+}
+
+/* Style the header */
+.header {
+    padding: 20px 20px 0 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(20px, 3vw, 30px); /* Dynamic font size for h1 */
+    color: #3f3f3f;
+    text-align: left; /* Align the header to the left */
+}
+
+/* General configuration for <p> elements */
+p {
+    font-size: clamp(14px, 4.75vw, 26px); /* Dynamic font size for paragraphs */
+    padding: 0 20px 0 20px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+/* Style the description text */
+#descriptionText {
+    transition: max-height 2s ease, opacity 2s ease; /* Smooth transition for height and opacity */
+    opacity: 1;
+}
+
+#descriptionText.expanded {
+    max-height: 15em;
+    opacity: 1;
+}
+
+#descriptionText.collapsed {
+    opacity: 1;
+}
+
+/* Style the 'Show more/Show less' text */
+#atext {
+    padding-left: 20px;
+    font-size: clamp(12px, 14px, 16px); /* Dynamic font size for links */
+    color: #4d8395;
+}
+
+#atext:hover {
+    color: #74c6e1;
+}
+
+/* Style the main content area */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px;
+}
+
+/* Style the placeholder message */
+.vidDiv {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    width: 100%;
+}
+
+/* Style the summary text */
+#summaryText {
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #38606e;
+    color: gray;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#summaryText.focused {
+    border: 3px solid #2d4953;
+}
+
+/* Style the button */
+#buttonClick {
+    background-color: #4d8395;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the left */
+}
+
+#buttonClick:not(:disabled):hover {
+    background-color: #2d4953;
+}
+
+#buttonClick:focus {
+    border: 3px solid #38606e;
+}
+
+#buttonClick:disabled {
+    cursor: not-allowed;
+    border: 1px solid #38606e;
+}
+
+.bottom-right-photo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50%;
+    height: auto;
+}
