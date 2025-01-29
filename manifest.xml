@@ -2,7 +2,7 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>6b981db2-2a7f-43ab-9d3a-ab5c480bd53f</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Fraunhofer Italia</ProviderName>
+  <ProviderName>DK</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="PECai"/>
   <Description DefaultValue="An AI-powered email assistant."/>
